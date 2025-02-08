@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Valentine</title>
+    <link rel="icon" type="image/x-icon" href="images/fave.ico.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Page 1 - Main Question -->
+    <div class="page active-page" id="page1">
+        <h1>You Make My Heart Bloom 💐</h1>
+        <h1>Will You Be My Valentine? 💖</h1>
+        <div class="interactive-elements">
+            <button id="yesBtn">Absolutely Yes! 😍🌹</button>
+            <button id="noBtn">Try to Say No 🌚😅</button>
+        </div>
+    </div>
+
+    <!-- Page 2 - Acceptance -->
+    <div class="page" id="page2">
+        <h1>Cheers to Our Adventure! 🥂</h1>
+        <div class="message-box">
+            <p>"The best thing to hold onto in life is each other."</p>
+            <p>- Audrey Hepburn</p>
+        </div>
+        <button onclick="location.reload()">Relive the Magic 🔁</button>
+    </div>
+
+    <!-- Page 3 - Playful Rejection -->
+    <div class="page" id="page3">
+        <h1>Nice Try! 😏<br>This Heart Can't Take No for an Answer!<br>💘 Try Again? 💘</h1>
+        <button onclick="showPage('page1')">Back to Question ↩️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

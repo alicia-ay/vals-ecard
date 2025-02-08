@@ -1,0 +1,143 @@
+:root {
+    --primary: #e63946;
+    --secondary: #f4a261;
+    --accent: #2a9d8f;
+    --text: #264653;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e6e6fa 0%, #d8bfd8 100%);
+    background-image: url("images/vals\ 4k.jpg"); /* Replace with your image path */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat;
+
+    font-family: 'Brush Script MT', cursive, 'Arial', cursive;
+    overflow: hidden;
+}
+
+.page {
+    display: none;
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: scale(0.9);
+    opacity: 0;
+    animation: cardEntrance 1s 0.5s forwards;
+}
+
+.active-page {
+    display: block;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2.8rem;
+    margin: 0 0 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message-box {
+    background: rgba(255, 245, 245, 0.9);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 2px solid var(--primary);
+}
+
+.interactive-elements {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* styles.css */
+
+/* Add this to your CSS */
+.dynamic-text {
+    font-size: 2.1em; /* Adjust this value to your desired size */
+}
+
+/* Styles for Page 2 */
+#page2 h1,
+#page2 p,
+#page2 button {
+    font-size: 2em;
+    /* Adjust this value to your desired size */
+}
+
+/* Styles for Page 3 */
+#page3 h1,
+#page3 p,
+#page3 button {
+    font-size: 1em;
+    /* Adjust this value to your desired size */
+}
+
+button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: var(--primary);
+    color: white;
+}
+
+
+.heart-particle {
+    position: absolute;
+    pointer-events: none;
+    animation: float 3s ease-in forwards;
+}
+
+@keyframes cardEntrance {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Added vintage texture */
+.card-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAMAAAAp4XiDAAAAUVBMVEWFhYWDg4N3d3dtbW17e3t1dXWBgYGHh4d5eXlzc3OLi4ubm5uVlZWPj4+NjY19fX2JiYlFRUUyMjJISEhDQ0NqampnZ2c8PDxubm56enrMzR6hAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAElEQVR4nO3UyW7DMAwF0DtgJwX6///VrhxUiqwuemxHwPOA++AqJNVSlS3L1q1Yt2rDhk2bHrY8PHh68vLi5c3Hh48vP/4CDoejA+J0OjucLhfL1XKz3C0Py9PysrwtH8vX8rP8A2JYxog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xog4xvj3iM+4BUUZR/ZsAAAAAElFTkSuQmCC');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    font-size: 2em;
+    color: #ff4757;
+    animation: float 3s infinite;
+}
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
