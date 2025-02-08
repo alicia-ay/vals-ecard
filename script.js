@@ -1,7 +1,7 @@
 // Enhanced interaction
 const adjectives = ["magical", "adventurous", "heartwarming", "unforgettable", "joyful"];
 let currentAdj = 0;
-const noButtonPhrases = ["Not this time! 💔", "Think again? 🤔", "Still no? 🥺", "Try me! 😉"]; // Array of phrases for the "No" button with emojis
+const noButtonPhrases = ["Not this time! 💔", "Think again? 🤔", "Still no? 🥺", "Try me! 😉", "Ha Ha!🤣"]; // Array of phrases for the "No" button with emojis
 
 function createHearts() {
     for (let i = 0; i < 15; i++) {
