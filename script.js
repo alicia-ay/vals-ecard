@@ -46,6 +46,20 @@ function changeNoButtonText() {
     noBtn.textContent = noButtonPhrases[randomIndex];
 }
 
+// Function to move the "No" button randomly
+function moveNoButton() {
+    const noBtn = document.getElementById('noBtn');
+    const maxX = window.innerWidth - noBtn.offsetWidth;
+    const maxY = window.innerHeight - noBtn.offsetHeight;
+
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
+
+    noBtn.style.position = 'absolute'; // Ensure the button can be positioned
+    noBtn.style.left = randomX + 'px';
+    noBtn.style.top = randomY + 'px';
+}
+
 // Event listeners
 document.getElementById('yesBtn').addEventListener('click', () => {
     showPage('page2'); // Ensure the page is shown
@@ -60,21 +74,28 @@ document.getElementById('yesBtn').addEventListener('click', () => {
     setInterval(cycleAdjectives, 2000);
 });
 
-
-
-
 document.getElementById('noBtn').addEventListener('click', () => {
     showPage('page3');
 });
 
-document.getElementById('noBtn').addEventListener('mouseover', function () {
+// Remove mouseover event listener
+/*document.getElementById('noBtn').addEventListener('mouseover', function () {
     this.style.transform = `translate(
         ${Math.random() * 100 - 50}px,
         ${Math.random() * 100 - 50}px
     )`;
     this.style.backgroundColor = '#2a9d8f';
     changeNoButtonText(); // Call the function to change the text
-});
+});*/
+
+// Set interval to change the "No" button text every 2 seconds (adjust as desired)
+setInterval(changeNoButtonText, 2000);
+
+// Set interval to move the "No" button randomly every 1 second (adjust as desired)
+setInterval(moveNoButton, 1000);
+
+// Call moveNoButton once when the page loads (optional, to start it immediately)
+moveNoButton();
 
 // Initialize adjective cycling
 setInterval(cycleAdjectives, 2000);

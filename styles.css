@@ -91,7 +91,9 @@ button {
     transition: all 0.3s ease;
     background: var(--primary);
     color: white;
+    position:relative;
 }
+
 
 
 .heart-particle {
