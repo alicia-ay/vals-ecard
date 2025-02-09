@@ -5,7 +5,6 @@
     --text: #264653;
 }
 
-
 body {
     margin: 0;
     height: 100vh;
@@ -13,10 +12,11 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #e6e6fa 0%, #d8bfd8 100%);
-    background-image: url("images/backdrop.jpg"); /* Replace with your image path */
-    background-size: cover; /* Cover the entire viewport */
+    background-image: url("images/backdrop.jpg");
+    /* Replace with your image path */
+    background-size: cover;
+    /* Cover the entire viewport */
     background-repeat: no-repeat;
-
     font-family: 'Brush Script MT', cursive, 'Arial', cursive;
     overflow: hidden;
 }
@@ -26,13 +26,36 @@ body {
     position: relative;
     text-align: center;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     transform: scale(0.9);
     opacity: 0;
     animation: cardEntrance 1s 0.5s forwards;
 }
+
+#page1 {
+    background-image: url("images/important.jpg");
+    /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#page2 {
+    background-image: url("images/affair.jpg");
+    /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#page3 {
+    background-image: url("images/affair.jpg");
+    /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .active-page {
     display: block;
@@ -63,7 +86,8 @@ h1 {
 
 /* Add this to your CSS */
 .dynamic-text {
-    font-size: 2.1em; /* Adjust this value to your desired size */
+    font-size: 2.1em;
+    /* Adjust this value to your desired size */
 }
 
 /* Styles for Page 2 */
@@ -83,6 +107,7 @@ h1 {
 }
 
 button {
+    position: relative;
     padding: 1rem 2rem;
     border: none;
     border-radius: 30px;
@@ -91,10 +116,7 @@ button {
     transition: all 0.3s ease;
     background: var(--primary);
     color: white;
-    position:relative;
 }
-
-
 
 .heart-particle {
     position: absolute;
@@ -110,8 +132,15 @@ button {
 }
 
 @keyframes float {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 /* Added vintage texture */
@@ -133,13 +162,14 @@ button {
     color: #ff4757;
     animation: float 3s infinite;
 }
+
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
     }
+
     button {
         font-size: 1rem;
         padding: 0.75rem 1.5rem;
     }
 }
-
