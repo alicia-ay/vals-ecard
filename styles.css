@@ -12,7 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #e6e6fa 0%, #d8bfd8 100%);
-    background-image: url("images/backdrop.jpg");
+    background-image: url("images/important.jpg");
     /* Replace with your image path */
     background-size: cover;
     /* Cover the entire viewport */
@@ -34,7 +34,7 @@ body {
 }
 
 #page1 {
-    background-image: url("images/important.jpg");
+    background-image: url("images/backdrop.jpg.jpg");
     /* Replace with your image path */
     background-size: cover;
     background-repeat: no-repeat;
