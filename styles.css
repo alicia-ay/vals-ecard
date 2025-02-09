@@ -34,8 +34,8 @@ body {
 }
 
 #page1 {
-    background-image: url("images/backdrop.jpg.jpg");
-    /* Replace with your image path */
+    /*background-image: url("images/backdrop.jpg.jpg");*/
+    
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
